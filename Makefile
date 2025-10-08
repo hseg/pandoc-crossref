@@ -43,8 +43,7 @@ stack.yaml: cabal.project.freeze stack.template.yaml .github/workflows/haskell.y
 		>> stack.yaml
 
 flake.lock: .github/workflows/haskell.yml
-	nix \
-		flake update
+	nix flake update
 
 stack.yaml.lock: .github/workflows/haskell.yml stack.yaml
 	# need this to update stack.yaml.lock, feel free to kill after that
